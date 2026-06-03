@@ -159,9 +159,9 @@ export function Dashboard() {
           </p>
 
           {loading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-4">
               {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="bg-white rounded-xl h-48 sm:h-52 animate-pulse border border-gray-100" />
+                <div key={i} className="bg-white rounded-xl h-44 sm:h-52 animate-pulse border border-gray-100" />
               ))}
             </div>
           ) : properties.length === 0 ? (
@@ -172,7 +172,7 @@ export function Dashboard() {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-4">
                 {properties.map(p => (
                   <PropertyCard key={p.id} property={p}
                     onStatusChange={handleStatusChange}
